@@ -57,7 +57,7 @@ public class GraphLink<G> {
 	}
 	private void DFSRec(Vertex<G> a) {
 		a.label = 1;
-		System.out.println(a.data+"   ;");
+		System.out.print(a.data+"   ;");
 		Node<Edge<G>> enlace = a.listAdj.first;
 		for(; enlace != null; enlace = enlace.getNext()) {
 			if(enlace.getData().label == 0) {

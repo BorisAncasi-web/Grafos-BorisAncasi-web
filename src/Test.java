@@ -7,16 +7,24 @@ public class Test {
 		grafo.insertVertex("cusco");
 		grafo.insertVertex("piura");
 		grafo.insertVertex("tarapoto");
+		grafo.insertVertex("puno");
+		grafo.insertVertex("tacna");
 		
 		grafo.insertEdge("lima", "aqp");
 		grafo.insertEdge("cusco", "aqp");
 		grafo.insertEdge("piura", "lima");
 		grafo.insertEdge("cusco", "lima");
 		grafo.insertEdge("piura", "tarapoto");
+		grafo.insertEdge("puno", "tacna");
+
 
 		
 		System.out.println("Grafo ciudades:\n"+grafo);
+		System.out.println("Recorrido en DFS");
 		grafo.DFS("aqp");
+		System.out.println("Recorrido en DFS");
+		grafo.DFS("tacna");
+		
 
 
 	}
