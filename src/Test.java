@@ -7,15 +7,16 @@ public class Test {
 		grafo.insertVertex("cusco");
 		grafo.insertVertex("piura");
 		grafo.insertVertex("tarapoto");
+		
 		grafo.insertEdge("lima", "aqp");
 		grafo.insertEdge("cusco", "aqp");
 		grafo.insertEdge("piura", "lima");
 		grafo.insertEdge("cusco", "lima");
 		grafo.insertEdge("piura", "tarapoto");
-		grafo.insertEdge("tarapoto", "piura");
 
 		
 		System.out.println("Grafo ciudades:\n"+grafo);
+		grafo.DFS("aqp");
 
 
 	}

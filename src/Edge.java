@@ -2,6 +2,7 @@
 public class Edge<T> {
 	protected Vertex<T> refFinal;
 	protected int weight;
+	protected int label;
 	public Edge(Vertex<T> refFinal) {
 		this(refFinal,-1);
 	}
