@@ -1,6 +1,6 @@
 
 public class ListLinked<T> {
-	private Node<T> first;
+	protected Node<T> first;
 	public ListLinked() {
 		this.first =null;
 	}

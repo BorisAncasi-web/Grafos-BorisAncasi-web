@@ -2,6 +2,7 @@
 public class Vertex<V> {
 	protected V data;
 	protected ListLinked<Edge<V>> listAdj;
+	protected int label;
 	
 	public Vertex(V data) {
 		this.data = data;
