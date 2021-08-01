@@ -44,7 +44,9 @@ public class GraphLink<G> {
 				aux.getData().label = 0;	
 		} 
 	}
-	
+	//0: UNEXPLORED
+	//1: VISITED
+	//2 : BACK
 	public void DFS(G data) {
 		Vertex<G> search = this.listVertex.searchElement(new Vertex<G>(data));
 		if(search == null) {
@@ -71,6 +73,19 @@ public class GraphLink<G> {
 			}
 		}
 		
+	}
+	//0: UNEXPLORED
+	//1: VISITED
+	//2: CROSS
+	public void BFS(G data) {
+		Vertex<G> search = this.listVertex.searchElement(new Vertex<G>(data));
+		if(search == null) {
+			System.out.println("Vertice no existe para hacer DFS....");
+			return;
+		}
+		initLabel();
+		//DFSRec(search);
+
 	}
 
 }
