@@ -45,8 +45,7 @@ public class Cola<E> {
     	System.out.println(ultimo+ " primero: "+ultimo);
     	for(; helper != null; helper = helper.getNext())
     		str += helper.getData()+",  ";
-    	return str;
-    	
+    	return str;	
     }
 
     public static void main(String[] args) {
@@ -60,14 +59,9 @@ public class Cola<E> {
         notas.desencolar();
         notas.desencolar();
         notas.desencolar();
-
         System.out.println(notas);
         notas.Encolar(11);
-        System.out.println(notas);
-
-
-
-       
+        System.out.println(notas);       
     }
 
 }
