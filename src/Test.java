@@ -15,15 +15,18 @@ public class Test {
 		grafo.insertEdge("piura", "lima");
 		grafo.insertEdge("cusco", "lima");
 		grafo.insertEdge("piura", "tarapoto");
-		grafo.insertEdge("puno", "tacna");
+		//grafo.insertEdge("puno", "tacna");
 
 
 		
 		System.out.println("Grafo ciudades:\n"+grafo);
 		System.out.println("Recorrido en DFS");
 		grafo.DFS("aqp");
-		System.out.println("Recorrido en DFS");
+		System.out.println("\nRecorrido en DFS");
 		grafo.DFS("tacna");
+		System.out.println("\nRecorrido en BFS");
+		grafo.BFS("aqp");
+		
 		
 
 

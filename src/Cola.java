@@ -27,13 +27,19 @@ public class Cola<E> {
         }
     }
 
-    public void desencolar(){
-        if (primero != null) {            
+    public E desencolar(){
+        Node<E> helper = primero;
+
+        if (primero != null) {  
+        	
             primero = primero.getNext();
             if (primero == null){
                 ultimo = null;
-            }            
+            }
+            return helper.getData();
         }
+        return null;
+       
     }
     
     public boolean isEmpty(){
@@ -55,10 +61,11 @@ public class Cola<E> {
         notas.Encolar(10);
         notas.Encolar(11);
         System.out.println(notas);
-        notas.desencolar();
-        notas.desencolar();
-        notas.desencolar();
-        notas.desencolar();
+        System.out.println(notas.desencolar());
+        System.out.println(notas.desencolar());
+        System.out.println(notas.desencolar());
+        System.out.println(notas.desencolar());
+
         System.out.println(notas);
         notas.Encolar(11);
         System.out.println(notas);       

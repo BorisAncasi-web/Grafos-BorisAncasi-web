@@ -84,8 +84,38 @@ public class GraphLink<G> {
 			return;
 		}
 		initLabel();
-		//DFSRec(search);
+		BFSRec(search);
 
+	}
+	private void BFSRec(Vertex<G> a) {
+		Cola<Vertex<G>> cola = new Cola<Vertex<G>>();
+		cola.Encolar(a);
+		a.label = 1;
+
+		while(!cola.isEmpty()) {
+			Vertex<G> u = cola.desencolar();
+			System.out.print("papa: "+u.data+"\n");
+
+			Node<Edge<G>> enlace = u.listAdj.first;
+			System.out.print("hijos:   ");
+			
+			for(; enlace != null; enlace = enlace.getNext()) {
+				if(enlace.getData().label == 0) {
+					//cola.Encolar(enlace.getData().refFinal);
+					Vertex<G> vert = enlace.getData().refFinal;
+					if(vert.label == 0) {//no visitado
+						System.out.print(vert.data+"   ");
+						cola.Encolar(vert);
+						enlace.getData().label = 1;//visitado
+						vert.label = 1;
+					}
+					else
+						enlace.getData().label = 2;//tipo back
+				}
+			}
+			System.out.println();
+		}
+		
 	}
 
 }
