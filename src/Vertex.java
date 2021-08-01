@@ -16,7 +16,7 @@ public class Vertex<V> {
 		return false;
 	}
 	public String toString() {
-		return this.data+" --> "+ this.listAdj.toString()+"\n";
+		return "label : "+label+"  "+this.data+" --> "+ this.listAdj.toString()+"\n";
 	}
 
 }

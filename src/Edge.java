@@ -21,7 +21,7 @@ public class Edge<T> {
 	public String toString() {
 		if(this.weight > -1)
 			return this.refFinal.data+" ["+this.weight+"], ";
-		return refFinal.data+", ";
+		return "Label : "+label+" :"+refFinal.data+", ";
 	}
 
 }

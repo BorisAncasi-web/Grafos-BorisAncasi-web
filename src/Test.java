@@ -26,6 +26,8 @@ public class Test {
 		grafo.DFS("tacna");
 		System.out.println("\nRecorrido en BFS");
 		grafo.BFS("aqp");
+		System.out.println("Grafo ciudades:\n"+grafo);
+
 		
 		
 
